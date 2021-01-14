@@ -1,0 +1,8 @@
+_build() {
+    docker-compose build
+    docker-compose run --rm marlin platformio run -t clean
+}
+
+case ${1} in
+build) _build ;;
+esac
