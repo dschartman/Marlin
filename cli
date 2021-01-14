@@ -1,6 +1,7 @@
 _build() {
     docker-compose build
-    docker-compose run --rm marlin platformio run -t clean
+    # docker-compose run --rm marlin platformio run -t clean
+    docker-compose run --rm marlin platformio run -t build
 }
 
 case ${1} in
