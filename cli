@@ -1,7 +1,8 @@
 _build() {
     docker-compose build
-    # docker-compose run --rm marlin platformio run -t clean
-    docker-compose run --rm marlin platformio run -t build
+    docker-compose run --rm marlin platformio run -t clean
+    docker-compose run --rm marlin platformio run -e STM32F103RET6_creality
+    # docker-compose run --rm marlin platformio -h
 }
 
 case ${1} in
